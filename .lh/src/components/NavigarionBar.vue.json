@@ -1,0 +1,66 @@
+{
+    "sourceFile": "src/components/NavigarionBar.vue",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 12,
+            "patches": [
+                {
+                    "date": 1627328473178,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1627328510504,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -60,11 +60,8 @@\n \t}\r\n \th1 {\r\n \t\tfont-size: 3rem;\r\n \t\tfont-weight: $bold;\r\n-\t\t@media only screen and (max-width: 1300px) {\r\n-\t\t\tgrid-gap: 1.8rem;\r\n-\t\t}\r\n \t}\r\n \th2 {\r\n \t\tfont-weight: $medium;\r\n \t}\r\n"
+                },
+                {
+                    "date": 1627330142048,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -60,8 +60,11 @@\n \t}\r\n \th1 {\r\n \t\tfont-size: 3rem;\r\n \t\tfont-weight: $bold;\r\n+\t\t@media only screen and (max-width: 1300px) {\r\n+\t\t\tgrid-gap: 3rem;\r\n+\t\t}\r\n \t}\r\n \th2 {\r\n \t\tfont-weight: $medium;\r\n \t}\r\n"
+                },
+                {
+                    "date": 1627330148181,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -60,9 +60,9 @@\n \t}\r\n \th1 {\r\n \t\tfont-size: 3rem;\r\n \t\tfont-weight: $bold;\r\n-\t\t@media only screen and (max-width: 1300px) {\r\n+\t\t@media only screen and (max-width: 700px) {\r\n \t\t\tgrid-gap: 3rem;\r\n \t\t}\r\n \t}\r\n \th2 {\r\n"
+                },
+                {
+                    "date": 1627330154197,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -61,9 +61,9 @@\n \th1 {\r\n \t\tfont-size: 3rem;\r\n \t\tfont-weight: $bold;\r\n \t\t@media only screen and (max-width: 700px) {\r\n-\t\t\tgrid-gap: 3rem;\r\n+\t\t\tfont-size: 2rem;\r\n \t\t}\r\n \t}\r\n \th2 {\r\n \t\tfont-weight: $medium;\r\n"
+                },
+                {
+                    "date": 1627330199712,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -63,8 +63,11 @@\n \t\tfont-weight: $bold;\r\n \t\t@media only screen and (max-width: 700px) {\r\n \t\t\tfont-size: 2rem;\r\n \t\t}\r\n+\t\t@media only screen and (max-width: 500px) {\r\n+\t\t\tfont-size: 1rem;\r\n+\t\t}\r\n \t}\r\n \th2 {\r\n \t\tfont-weight: $medium;\r\n \t}\r\n"
+                },
+                {
+                    "date": 1627330208309,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -64,9 +64,9 @@\n \t\t@media only screen and (max-width: 700px) {\r\n \t\t\tfont-size: 2rem;\r\n \t\t}\r\n \t\t@media only screen and (max-width: 500px) {\r\n-\t\t\tfont-size: 1rem;\r\n+\t\t\tfont-size: 1.7rem;\r\n \t\t}\r\n \t}\r\n \th2 {\r\n \t\tfont-weight: $medium;\r\n"
+                },
+                {
+                    "date": 1627330282237,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -69,7 +69,10 @@\n \t\t}\r\n \t}\r\n \th2 {\r\n \t\tfont-weight: $medium;\r\n+\t\t@media only screen and (max-width: 500px) {\r\n+\t\t\tfont-size: 1.2rem;\r\n+\t\t}\r\n \t}\r\n }\r\n </style>\r\n"
+                },
+                {
+                    "date": 1627330294177,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -70,9 +70,9 @@\n \t}\r\n \th2 {\r\n \t\tfont-weight: $medium;\r\n \t\t@media only screen and (max-width: 500px) {\r\n-\t\t\tfont-size: 1.2rem;\r\n+\t\t\tfont-size: 1.5rem;\r\n \t\t}\r\n \t}\r\n }\r\n </style>\r\n"
+                },
+                {
+                    "date": 1627330335635,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -51,8 +51,9 @@\n \t}\r\n \t.navigation__mode {\r\n \t\tdisplay: flex;\r\n \t\tjustify-content: space-around;\r\n+\t\talign-items: center;\r\n \t}\r\n \tsvg {\r\n \t\tmargin-right: 1rem;\r\n \t\ttransform: rotate(320deg);\r\n"
+                },
+                {
+                    "date": 1627330411149,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -67,13 +67,19 @@\n \t\t}\r\n \t\t@media only screen and (max-width: 500px) {\r\n \t\t\tfont-size: 1.7rem;\r\n \t\t}\r\n+\t\t@media only screen and (max-width: 320px) {\r\n+\t\t\tfont-size: 1.2rem;\r\n+\t\t}\r\n \t}\r\n \th2 {\r\n \t\tfont-weight: $medium;\r\n \t\t@media only screen and (max-width: 500px) {\r\n \t\t\tfont-size: 1.5rem;\r\n \t\t}\r\n+\t\t@media only screen and (max-width: 320px) {\r\n+\t\t\tfont-size: 1rem;\r\n+\t\t}\r\n \t}\r\n }\r\n </style>\r\n"
+                },
+                {
+                    "date": 1627330422926,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -68,18 +68,18 @@\n \t\t@media only screen and (max-width: 500px) {\r\n \t\t\tfont-size: 1.7rem;\r\n \t\t}\r\n \t\t@media only screen and (max-width: 320px) {\r\n-\t\t\tfont-size: 1.2rem;\r\n+\t\t\tfont-size: 1.4rem;\r\n \t\t}\r\n \t}\r\n \th2 {\r\n \t\tfont-weight: $medium;\r\n \t\t@media only screen and (max-width: 500px) {\r\n \t\t\tfont-size: 1.5rem;\r\n \t\t}\r\n \t\t@media only screen and (max-width: 320px) {\r\n-\t\t\tfont-size: 1rem;\r\n+\t\t\tfont-size: 1.2rem;\r\n \t\t}\r\n \t}\r\n }\r\n </style>\r\n"
+                },
+                {
+                    "date": 1627330431859,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -68,18 +68,18 @@\n \t\t@media only screen and (max-width: 500px) {\r\n \t\t\tfont-size: 1.7rem;\r\n \t\t}\r\n \t\t@media only screen and (max-width: 320px) {\r\n-\t\t\tfont-size: 1.4rem;\r\n+\t\t\tfont-size: 1.5rem;\r\n \t\t}\r\n \t}\r\n \th2 {\r\n \t\tfont-weight: $medium;\r\n \t\t@media only screen and (max-width: 500px) {\r\n \t\t\tfont-size: 1.5rem;\r\n \t\t}\r\n \t\t@media only screen and (max-width: 320px) {\r\n-\t\t\tfont-size: 1.2rem;\r\n+\t\t\tfont-size: 1.3rem;\r\n \t\t}\r\n \t}\r\n }\r\n </style>\r\n"
+                }
+            ],
+            "date": 1627328473178,
+            "name": "Commit-0",
+            "content": "<template>\r\n\t<header>\r\n\t\t<nav class=\"navigation\">\r\n\t\t\t<div class=\"navigation__logo\">\r\n\t\t\t\t<h1>Where in the world?</h1>\r\n\t\t\t</div>\r\n\t\t\t<div class=\"navigation__mode\">\r\n\t\t\t\t<svg\r\n\t\t\t\t\txmlns=\"http://www.w3.org/2000/svg\"\r\n\t\t\t\t\tenable-background=\"new 0 0 24 24\"\r\n\t\t\t\t\theight=\"24px\"\r\n\t\t\t\t\tviewBox=\"0 0 24 24\"\r\n\t\t\t\t\twidth=\"24px\"\r\n\t\t\t\t\tfill=\"#000000\"\r\n\t\t\t\t>\r\n\t\t\t\t\t<g><rect fill=\"none\" height=\"24\" width=\"24\" /></g>\r\n\t\t\t\t\t<g>\r\n\t\t\t\t\t\t<g>\r\n\t\t\t\t\t\t\t<path\r\n\t\t\t\t\t\t\t\td=\"M15.5,22c1.05,0,2.05-0.16,3-0.46c-4.06-1.27-7-5.06-7-9.54s2.94-8.27,7-9.54C17.55,2.16,16.55,2,15.5,2 c-5.52,0-10,4.48-10,10S9.98,22,15.5,22L15.5,22z\"\r\n\t\t\t\t\t\t\t/>\r\n\t\t\t\t\t\t</g>\r\n\t\t\t\t\t</g>\r\n\t\t\t\t</svg>\r\n\t\t\t\t<h2>Dark Mode</h2>\r\n\t\t\t</div>\r\n\t\t</nav>\r\n\t</header>\r\n</template>\r\n\r\n<script>\r\nexport default {};\r\n</script>\r\n\r\n<style lang=\"scss\" scoped>\r\n@import \"@/assets/_variables.scss\";\r\n\r\nheader {\r\n\twidth: 100%;\r\n\tbackground-color: $darkblue-el;\r\n\tcolor: $white;\r\n\ttext-shadow: 4px -1px 5px rgba(0, 0, 0, 0.48);\r\n\tbox-shadow: -5px -2px 12px 5px #000000;\r\n\t.navigation {\r\n\t\theight: 10rem;\r\n\t\twidth: 90%;\r\n\t\tmargin: auto;\r\n\t\tdisplay: flex;\r\n\t\tjustify-content: space-between;\r\n\t\talign-items: center;\r\n\t}\r\n\t.navigation__mode {\r\n\t\tdisplay: flex;\r\n\t\tjustify-content: space-around;\r\n\t}\r\n\tsvg {\r\n\t\tmargin-right: 1rem;\r\n\t\ttransform: rotate(320deg);\r\n\t\tfill: $white;\r\n\t}\r\n\th1 {\r\n\t\tfont-size: 3rem;\r\n\t\tfont-weight: $bold;\r\n\t\t@media only screen and (max-width: 1300px) {\r\n\t\t\tgrid-gap: 1.8rem;\r\n\t\t}\r\n\t}\r\n\th2 {\r\n\t\tfont-weight: $medium;\r\n\t}\r\n}\r\n</style>\r\n"
+        }
+    ]
+}

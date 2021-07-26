@@ -1,0 +1,206 @@
+{
+    "sourceFile": "src/components/FilteringCoutnry.vue",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 47,
+            "patches": [
+                {
+                    "date": 1627313220832,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1627313230231,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -52,43 +52,8 @@\n \tmethods: {\r\n \t\tchangeVisibility() {\r\n \t\t\tthis.clicked = !this.clicked;\r\n \t\t},\r\n-\t\tcheckaf() {\r\n-\t\t\tthis.oceania = false;\r\n-\t\t\tthis.europe = false;\r\n-\t\t\tthis.asia = false;\r\n-\t\t\tthis.america = false;\r\n-\t\t\tthis.africa = true;\r\n-\t\t},\r\n-\t\tcheckam() {\r\n-\t\t\tthis.oceania = false;\r\n-\t\t\tthis.europe = false;\r\n-\t\t\tthis.asia = false;\r\n-\t\t\tthis.africa = false;\r\n-\t\t\tthis.america = true;\r\n-\t\t},\r\n-\t\tcheckas() {\r\n-\t\t\tthis.oceania = false;\r\n-\t\t\tthis.europe = false;\r\n-\t\t\tthis.africa = false;\r\n-\t\t\tthis.america = false;\r\n-\t\t\tthis.asia = true;\r\n-\t\t},\r\n-\t\tcheckeu() {\r\n-\t\t\tthis.oceania = false;\r\n-\t\t\tthis.asia = false;\r\n-\t\t\tthis.africa = false;\r\n-\t\t\tthis.america = false;\r\n-\t\t\tthis.europe = true;\r\n-\t\t},\r\n-\t\tcheckoce() {\r\n-\t\t\tthis.asia = false;\r\n-\t\t\tthis.africa = false;\r\n-\t\t\tthis.america = false;\r\n-\t\t\tthis.europe = false;\r\n-\t\t\tthis.oceania = true;\r\n-\t\t},\r\n \t},\r\n };\r\n </script>\r\n \r\n"
+                },
+                {
+                    "date": 1627330583863,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -67,8 +67,11 @@\n \tmargin: auto;\r\n \tdisplay: flex;\r\n \tjustify-content: space-between;\r\n \talign-items: center;\r\n+\t@media only screen and (max-width: 700px) {\r\n+\t\tfont-size: 2rem;\r\n+\t}\r\n \t&__input {\r\n \t\tposition: relative;\r\n \t\tsvg {\r\n \t\t\tposition: absolute;\r\n"
+                },
+                {
+                    "date": 1627330589328,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -68,9 +68,9 @@\n \tdisplay: flex;\r\n \tjustify-content: space-between;\r\n \talign-items: center;\r\n \t@media only screen and (max-width: 700px) {\r\n-\t\tfont-size: 2rem;\r\n+\t\tpadding: 5rem 4rem;\r\n \t}\r\n \t&__input {\r\n \t\tposition: relative;\r\n \t\tsvg {\r\n"
+                },
+                {
+                    "date": 1627330615979,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -67,10 +67,10 @@\n \tmargin: auto;\r\n \tdisplay: flex;\r\n \tjustify-content: space-between;\r\n \talign-items: center;\r\n-\t@media only screen and (max-width: 700px) {\r\n-\t\tpadding: 5rem 4rem;\r\n+\t@media only screen and (max-width: 1100px) {\r\n+\t\tpadding: 5rem 2rem;\r\n \t}\r\n \t&__input {\r\n \t\tposition: relative;\r\n \t\tsvg {\r\n"
+                },
+                {
+                    "date": 1627330686209,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -104,9 +104,9 @@\n \t\tfont-weight: $light;\r\n \t\tfont-size: 1.6rem;\r\n \t\tborder-radius: 5px;\r\n \t\twidth: 20rem;\r\n-\t\tpadding: 2rem;\r\n+\t\tpadding: 1.7rem;\r\n \t\tbox-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.19);\r\n \t\tbackground-color: $darkblue-el;\r\n \t}\r\n \tsvg {\r\n"
+                },
+                {
+                    "date": 1627330739293,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -70,8 +70,11 @@\n \talign-items: center;\r\n \t@media only screen and (max-width: 1100px) {\r\n \t\tpadding: 5rem 2rem;\r\n \t}\r\n+\t@media only screen and (max-width: 1100px) {\r\n+\t\tpadding: 5rem 2rem;\r\n+\t}\r\n \t&__input {\r\n \t\tposition: relative;\r\n \t\tsvg {\r\n \t\t\tposition: absolute;\r\n"
+                },
+                {
+                    "date": 1627330755467,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -71,9 +71,9 @@\n \t@media only screen and (max-width: 1100px) {\r\n \t\tpadding: 5rem 2rem;\r\n \t}\r\n \t@media only screen and (max-width: 1100px) {\r\n-\t\tpadding: 5rem 2rem;\r\n+\t\tflex-direction: column;\r\n \t}\r\n \t&__input {\r\n \t\tposition: relative;\r\n \t\tsvg {\r\n"
+                },
+                {
+                    "date": 1627330776110,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -72,8 +72,9 @@\n \t\tpadding: 5rem 2rem;\r\n \t}\r\n \t@media only screen and (max-width: 1100px) {\r\n \t\tflex-direction: column;\r\n+\t\talign-self: start;\r\n \t}\r\n \t&__input {\r\n \t\tposition: relative;\r\n \t\tsvg {\r\n"
+                },
+                {
+                    "date": 1627330791006,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -72,9 +72,9 @@\n \t\tpadding: 5rem 2rem;\r\n \t}\r\n \t@media only screen and (max-width: 1100px) {\r\n \t\tflex-direction: column;\r\n-\t\talign-self: start;\r\n+\t\tjustify-items: start;\r\n \t}\r\n \t&__input {\r\n \t\tposition: relative;\r\n \t\tsvg {\r\n"
+                },
+                {
+                    "date": 1627330799709,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -73,8 +73,9 @@\n \t}\r\n \t@media only screen and (max-width: 1100px) {\r\n \t\tflex-direction: column;\r\n \t\tjustify-items: start;\r\n+\t\talign-items: flex-start;\r\n \t}\r\n \t&__input {\r\n \t\tposition: relative;\r\n \t\tsvg {\r\n"
+                },
+                {
+                    "date": 1627330840356,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -72,9 +72,8 @@\n \t\tpadding: 5rem 2rem;\r\n \t}\r\n \t@media only screen and (max-width: 1100px) {\r\n \t\tflex-direction: column;\r\n-\t\tjustify-items: start;\r\n \t\talign-items: flex-start;\r\n \t}\r\n \t&__input {\r\n \t\tposition: relative;\r\n@@ -84,8 +83,11 @@\n \t\t\ttransform: translateY(-50%);\r\n \t\t\tleft: 0;\r\n \t\t\tmargin: 0 2rem;\r\n \t\t}\r\n+\t\t@media only screen and (max-width: 1100px) {\r\n+\t\t\tpadding-bottom: 5rem;\r\n+\t\t}\r\n \t}\r\n \tinput {\r\n \t\tborder-radius: 5px;\r\n \t\twidth: 50rem;\r\n"
+                },
+                {
+                    "date": 1627330857873,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -83,11 +83,8 @@\n \t\t\ttransform: translateY(-50%);\r\n \t\t\tleft: 0;\r\n \t\t\tmargin: 0 2rem;\r\n \t\t}\r\n-\t\t@media only screen and (max-width: 1100px) {\r\n-\t\t\tpadding-bottom: 5rem;\r\n-\t\t}\r\n \t}\r\n \tinput {\r\n \t\tborder-radius: 5px;\r\n \t\twidth: 50rem;\r\n"
+                },
+                {
+                    "date": 1627330870833,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -70,9 +70,9 @@\n \talign-items: center;\r\n \t@media only screen and (max-width: 1100px) {\r\n \t\tpadding: 5rem 2rem;\r\n \t}\r\n-\t@media only screen and (max-width: 1100px) {\r\n+\t@media only screen and (max-width: 750px) {\r\n \t\tflex-direction: column;\r\n \t\talign-items: flex-start;\r\n \t}\r\n \t&__input {\r\n"
+                },
+                {
+                    "date": 1627330883668,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -83,8 +83,11 @@\n \t\t\ttransform: translateY(-50%);\r\n \t\t\tleft: 0;\r\n \t\t\tmargin: 0 2rem;\r\n \t\t}\r\n+\t\t@media only screen and (max-width: 1100px) {\r\n+\t\t\tpadding-bottom: 5rem;\r\n+\t\t}\r\n \t}\r\n \tinput {\r\n \t\tborder-radius: 5px;\r\n \t\twidth: 50rem;\r\n"
+                },
+                {
+                    "date": 1627330904164,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -83,9 +83,9 @@\n \t\t\ttransform: translateY(-50%);\r\n \t\t\tleft: 0;\r\n \t\t\tmargin: 0 2rem;\r\n \t\t}\r\n-\t\t@media only screen and (max-width: 1100px) {\r\n+\t\t@media only screen and (max-width: 750px) {\r\n \t\t\tpadding-bottom: 5rem;\r\n \t\t}\r\n \t}\r\n \tinput {\r\n"
+                },
+                {
+                    "date": 1627330949947,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -85,8 +85,9 @@\n \t\t\tmargin: 0 2rem;\r\n \t\t}\r\n \t\t@media only screen and (max-width: 750px) {\r\n \t\t\tpadding-bottom: 5rem;\r\n+\t\t\ttop: 25%;\r\n \t\t}\r\n \t}\r\n \tinput {\r\n \t\tborder-radius: 5px;\r\n"
+                },
+                {
+                    "date": 1627330958804,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -82,8 +82,11 @@\n \t\t\ttop: 50%;\r\n \t\t\ttransform: translateY(-50%);\r\n \t\t\tleft: 0;\r\n \t\t\tmargin: 0 2rem;\r\n+\t\t\t@media only screen and (max-width: 750px) {\r\n+\t\t\t\ttop: 25%;\r\n+\t\t\t}\r\n \t\t}\r\n \t\t@media only screen and (max-width: 750px) {\r\n \t\t\tpadding-bottom: 5rem;\r\n \t\t\ttop: 25%;\r\n"
+                },
+                {
+                    "date": 1627330990104,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -93,9 +93,9 @@\n \t\t}\r\n \t}\r\n \tinput {\r\n \t\tborder-radius: 5px;\r\n-\t\twidth: 50rem;\r\n+\t\tmax-width: 50rem;\r\n \t\tborder: none;\r\n \t\toutline: none;\r\n \t\tpadding: 2rem 7rem;\r\n \t\tbackground-color: $darkblue-el;\r\n"
+                },
+                {
+                    "date": 1627330998098,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -93,9 +93,9 @@\n \t\t}\r\n \t}\r\n \tinput {\r\n \t\tborder-radius: 5px;\r\n-\t\tmax-width: 50rem;\r\n+\t\twidth: 50rem;\r\n \t\tborder: none;\r\n \t\toutline: none;\r\n \t\tpadding: 2rem 7rem;\r\n \t\tbackground-color: $darkblue-el;\r\n"
+                },
+                {
+                    "date": 1627331013679,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -93,9 +93,9 @@\n \t\t}\r\n \t}\r\n \tinput {\r\n \t\tborder-radius: 5px;\r\n-\t\twidth: 50rem;\r\n+\t\tmax-width: 50rem;\r\n \t\tborder: none;\r\n \t\toutline: none;\r\n \t\tpadding: 2rem 7rem;\r\n \t\tbackground-color: $darkblue-el;\r\n"
+                },
+                {
+                    "date": 1627331030170,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -93,9 +93,9 @@\n \t\t}\r\n \t}\r\n \tinput {\r\n \t\tborder-radius: 5px;\r\n-\t\tmax-width: 50rem;\r\n+\t\twidth: 50rem;\r\n \t\tborder: none;\r\n \t\toutline: none;\r\n \t\tpadding: 2rem 7rem;\r\n \t\tbackground-color: $darkblue-el;\r\n"
+                },
+                {
+                    "date": 1627331051713,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -94,8 +94,12 @@\n \t}\r\n \tinput {\r\n \t\tborder-radius: 5px;\r\n \t\twidth: 50rem;\r\n+\t\t@media only screen and (max-width: 750px) {\r\n+\t\t\tpadding-bottom: 5rem;\r\n+\t\t\ttop: 25%;\r\n+\t\t}\r\n \t\tborder: none;\r\n \t\toutline: none;\r\n \t\tpadding: 2rem 7rem;\r\n \t\tbackground-color: $darkblue-el;\r\n"
+                },
+                {
+                    "date": 1627331076546,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -87,9 +87,8 @@\n \t\t\t\ttop: 25%;\r\n \t\t\t}\r\n \t\t}\r\n \t\t@media only screen and (max-width: 750px) {\r\n-\t\t\tpadding-bottom: 5rem;\r\n \t\t\ttop: 25%;\r\n \t\t}\r\n \t}\r\n \tinput {\r\n"
+                },
+                {
+                    "date": 1627331085354,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -87,8 +87,9 @@\n \t\t\t\ttop: 25%;\r\n \t\t\t}\r\n \t\t}\r\n \t\t@media only screen and (max-width: 750px) {\r\n+\t\t\tpadding-bottom: 5rem;\r\n \t\t\ttop: 25%;\r\n \t\t}\r\n \t}\r\n \tinput {\r\n"
+                },
+                {
+                    "date": 1627331098717,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -87,9 +87,9 @@\n \t\t\t\ttop: 25%;\r\n \t\t\t}\r\n \t\t}\r\n \t\t@media only screen and (max-width: 750px) {\r\n-\t\t\tpadding-bottom: 5rem;\r\n+\t\t\tmargin-bottom: 5rem;\r\n \t\t\ttop: 25%;\r\n \t\t}\r\n \t}\r\n \tinput {\r\n"
+                },
+                {
+                    "date": 1627331107232,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -87,9 +87,8 @@\n \t\t\t\ttop: 25%;\r\n \t\t\t}\r\n \t\t}\r\n \t\t@media only screen and (max-width: 750px) {\r\n-\t\t\tmargin-bottom: 5rem;\r\n \t\t\ttop: 25%;\r\n \t\t}\r\n \t}\r\n \tinput {\r\n"
+                },
+                {
+                    "date": 1627331119883,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -94,9 +94,8 @@\n \tinput {\r\n \t\tborder-radius: 5px;\r\n \t\twidth: 50rem;\r\n \t\t@media only screen and (max-width: 750px) {\r\n-\t\t\tpadding-bottom: 5rem;\r\n \t\t\ttop: 25%;\r\n \t\t}\r\n \t\tborder: none;\r\n \t\toutline: none;\r\n"
+                },
+                {
+                    "date": 1627331128171,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -94,8 +94,9 @@\n \tinput {\r\n \t\tborder-radius: 5px;\r\n \t\twidth: 50rem;\r\n \t\t@media only screen and (max-width: 750px) {\r\n+\t\t\tpadding-bottom: 5rem;\r\n \t\t\ttop: 25%;\r\n \t\t}\r\n \t\tborder: none;\r\n \t\toutline: none;\r\n"
+                },
+                {
+                    "date": 1627331180580,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -94,9 +94,8 @@\n \tinput {\r\n \t\tborder-radius: 5px;\r\n \t\twidth: 50rem;\r\n \t\t@media only screen and (max-width: 750px) {\r\n-\t\t\tpadding-bottom: 5rem;\r\n \t\t\ttop: 25%;\r\n \t\t}\r\n \t\tborder: none;\r\n \t\toutline: none;\r\n"
+                },
+                {
+                    "date": 1627331203359,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -120,8 +120,11 @@\n \t\twidth: 20rem;\r\n \t\tpadding: 1.7rem;\r\n \t\tbox-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.19);\r\n \t\tbackground-color: $darkblue-el;\r\n+\t\t@media only screen and (max-width: 750px) {\r\n+\t\t\tmargin-top: 5rem;\r\n+\t\t}\r\n \t}\r\n \tsvg {\r\n \t\tcursor: pointer;\r\n \t}\r\n"
+                },
+                {
+                    "date": 1627331210968,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -93,11 +93,9 @@\n \t}\r\n \tinput {\r\n \t\tborder-radius: 5px;\r\n \t\twidth: 50rem;\r\n-\t\t@media only screen and (max-width: 750px) {\r\n-\t\t\ttop: 25%;\r\n-\t\t}\r\n+\r\n \t\tborder: none;\r\n \t\toutline: none;\r\n \t\tpadding: 2rem 7rem;\r\n \t\tbackground-color: $darkblue-el;\r\n"
+                },
+                {
+                    "date": 1627331232411,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -82,15 +82,9 @@\n \t\t\ttop: 50%;\r\n \t\t\ttransform: translateY(-50%);\r\n \t\t\tleft: 0;\r\n \t\t\tmargin: 0 2rem;\r\n-\t\t\t@media only screen and (max-width: 750px) {\r\n-\t\t\t\ttop: 25%;\r\n-\t\t\t}\r\n \t\t}\r\n-\t\t@media only screen and (max-width: 750px) {\r\n-\t\t\ttop: 25%;\r\n-\t\t}\r\n \t}\r\n \tinput {\r\n \t\tborder-radius: 5px;\r\n \t\twidth: 50rem;\r\n"
+                },
+                {
+                    "date": 1627331249450,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -87,8 +87,9 @@\n \t}\r\n \tinput {\r\n \t\tborder-radius: 5px;\r\n \t\twidth: 50rem;\r\n+\t\tfont-size: 1.6rem;\r\n \r\n \t\tborder: none;\r\n \t\toutline: none;\r\n \t\tpadding: 2rem 7rem;\r\n"
+                },
+                {
+                    "date": 1627331282161,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -87,8 +87,12 @@\n \t}\r\n \tinput {\r\n \t\tborder-radius: 5px;\r\n \t\twidth: 50rem;\r\n+\t\t@media only screen and (max-width: 550px) {\r\n+\t\t\tflex-direction: column;\r\n+\t\t\talign-items: flex-start;\r\n+\t\t}\r\n \t\tfont-size: 1.6rem;\r\n \r\n \t\tborder: none;\r\n \t\toutline: none;\r\n"
+                },
+                {
+                    "date": 1627331338362,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -88,10 +88,9 @@\n \tinput {\r\n \t\tborder-radius: 5px;\r\n \t\twidth: 50rem;\r\n \t\t@media only screen and (max-width: 550px) {\r\n-\t\t\tflex-direction: column;\r\n-\t\t\talign-items: flex-start;\r\n+\t\t\tmax-width: 50rem;\r\n \t\t}\r\n \t\tfont-size: 1.6rem;\r\n \r\n \t\tborder: none;\r\n"
+                },
+                {
+                    "date": 1627331362715,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -91,9 +91,8 @@\n \t\t@media only screen and (max-width: 550px) {\r\n \t\t\tmax-width: 50rem;\r\n \t\t}\r\n \t\tfont-size: 1.6rem;\r\n-\r\n \t\tborder: none;\r\n \t\toutline: none;\r\n \t\tpadding: 2rem 7rem;\r\n \t\tbackground-color: $darkblue-el;\r\n"
+                },
+                {
+                    "date": 1627331401073,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -88,9 +88,9 @@\n \tinput {\r\n \t\tborder-radius: 5px;\r\n \t\twidth: 50rem;\r\n \t\t@media only screen and (max-width: 550px) {\r\n-\t\t\tmax-width: 50rem;\r\n+\t\t\twidth: 20rem;\r\n \t\t}\r\n \t\tfont-size: 1.6rem;\r\n \t\tborder: none;\r\n \t\toutline: none;\r\n"
+                },
+                {
+                    "date": 1627331406289,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -88,9 +88,9 @@\n \tinput {\r\n \t\tborder-radius: 5px;\r\n \t\twidth: 50rem;\r\n \t\t@media only screen and (max-width: 550px) {\r\n-\t\t\twidth: 20rem;\r\n+\t\t\tmax-width: 50rem;\r\n \t\t}\r\n \t\tfont-size: 1.6rem;\r\n \t\tborder: none;\r\n \t\toutline: none;\r\n"
+                },
+                {
+                    "date": 1627331414307,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -88,9 +88,9 @@\n \tinput {\r\n \t\tborder-radius: 5px;\r\n \t\twidth: 50rem;\r\n \t\t@media only screen and (max-width: 550px) {\r\n-\t\t\tmax-width: 50rem;\r\n+\t\t\twidth: 30rem;\r\n \t\t}\r\n \t\tfont-size: 1.6rem;\r\n \t\tborder: none;\r\n \t\toutline: none;\r\n"
+                },
+                {
+                    "date": 1627331431362,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -90,8 +90,11 @@\n \t\twidth: 50rem;\r\n \t\t@media only screen and (max-width: 550px) {\r\n \t\t\twidth: 30rem;\r\n \t\t}\r\n+\t\t@media only screen and (max-width: 350px) {\r\n+\t\t\twidth: 25rem;\r\n+\t\t}\r\n \t\tfont-size: 1.6rem;\r\n \t\tborder: none;\r\n \t\toutline: none;\r\n \t\tpadding: 2rem 7rem;\r\n"
+                },
+                {
+                    "date": 1627331448290,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -92,8 +92,9 @@\n \t\t\twidth: 30rem;\r\n \t\t}\r\n \t\t@media only screen and (max-width: 350px) {\r\n \t\t\twidth: 25rem;\r\n+\t\t\tfont-size: 1.4rem;\r\n \t\t}\r\n \t\tfont-size: 1.6rem;\r\n \t\tborder: none;\r\n \t\toutline: none;\r\n"
+                },
+                {
+                    "date": 1627331456157,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -92,9 +92,9 @@\n \t\t\twidth: 30rem;\r\n \t\t}\r\n \t\t@media only screen and (max-width: 350px) {\r\n \t\t\twidth: 25rem;\r\n-\t\t\tfont-size: 1.4rem;\r\n+\t\t\tfont-size: 1.2rem;\r\n \t\t}\r\n \t\tfont-size: 1.6rem;\r\n \t\tborder: none;\r\n \t\toutline: none;\r\n"
+                },
+                {
+                    "date": 1627331471289,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -82,8 +82,11 @@\n \t\t\ttop: 50%;\r\n \t\t\ttransform: translateY(-50%);\r\n \t\t\tleft: 0;\r\n \t\t\tmargin: 0 2rem;\r\n+\t\t\t@media only screen and (max-width: 350px) {\r\n+\t\t\t\tmargin: 0 0rem;\r\n+\t\t\t}\r\n \t\t}\r\n \t}\r\n \tinput {\r\n \t\tborder-radius: 5px;\r\n"
+                },
+                {
+                    "date": 1627331484075,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -83,9 +83,9 @@\n \t\t\ttransform: translateY(-50%);\r\n \t\t\tleft: 0;\r\n \t\t\tmargin: 0 2rem;\r\n \t\t\t@media only screen and (max-width: 350px) {\r\n-\t\t\t\tmargin: 0 0rem;\r\n+\t\t\t\tmargin: 0 0 0 2rem;\r\n \t\t\t}\r\n \t\t}\r\n \t}\r\n \tinput {\r\n"
+                },
+                {
+                    "date": 1627331502991,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -82,11 +82,8 @@\n \t\t\ttop: 50%;\r\n \t\t\ttransform: translateY(-50%);\r\n \t\t\tleft: 0;\r\n \t\t\tmargin: 0 2rem;\r\n-\t\t\t@media only screen and (max-width: 350px) {\r\n-\t\t\t\tmargin: 0 0 0 2rem;\r\n-\t\t\t}\r\n \t\t}\r\n \t}\r\n \tinput {\r\n \t\tborder-radius: 5px;\r\n@@ -101,8 +98,11 @@\n \t\tfont-size: 1.6rem;\r\n \t\tborder: none;\r\n \t\toutline: none;\r\n \t\tpadding: 2rem 7rem;\r\n+\t\t@media only screen and (max-width: 350px) {\r\n+\t\t\tmargin: 0 0 0 2rem;\r\n+\t\t}\r\n \t\tbackground-color: $darkblue-el;\r\n \t\tcolor: $white;\r\n \t\ttext-align: left;\r\n \t\tbox-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.19);\r\n"
+                },
+                {
+                    "date": 1627331518347,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -99,9 +99,9 @@\n \t\tborder: none;\r\n \t\toutline: none;\r\n \t\tpadding: 2rem 7rem;\r\n \t\t@media only screen and (max-width: 350px) {\r\n-\t\t\tmargin: 0 0 0 2rem;\r\n+\t\t\tpadding: 2rem 6rem;\r\n \t\t}\r\n \t\tbackground-color: $darkblue-el;\r\n \t\tcolor: $white;\r\n \t\ttext-align: left;\r\n"
+                },
+                {
+                    "date": 1627331541545,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -125,8 +125,11 @@\n \t\tbackground-color: $darkblue-el;\r\n \t\t@media only screen and (max-width: 750px) {\r\n \t\t\tmargin-top: 5rem;\r\n \t\t}\r\n+\t\t@media only screen and (max-width: 350px) {\r\n+\t\t\tfont-size: 1.2rem;\r\n+\t\t}\r\n \t}\r\n \tsvg {\r\n \t\tcursor: pointer;\r\n \t}\r\n"
+                }
+            ],
+            "date": 1627313220832,
+            "name": "Commit-0",
+            "content": "<template>\r\n\t<div class=\"search\">\r\n\t\t<div class=\"search__input\">\r\n\t\t\t<svg\r\n\t\t\t\txmlns=\"http://www.w3.org/2000/svg\"\r\n\t\t\t\theight=\"24px\"\r\n\t\t\t\tviewBox=\"0 0 24 24\"\r\n\t\t\t\twidth=\"24px\"\r\n\t\t\t\tfill=\"#FFFFFF\"\r\n\t\t\t>\r\n\t\t\t\t<path d=\"M0 0h24v24H0V0z\" fill=\"none\" />\r\n\t\t\t\t<path\r\n\t\t\t\t\td=\"M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z\"\r\n\t\t\t\t/>\r\n\t\t\t</svg>\r\n\t\t\t<input type=\"text\" placeholder=\"Search for a country...\" />\r\n\t\t</div>\r\n\t\t<div class=\"search__filter\">\r\n\t\t\t<p>Filter by Region</p>\r\n\t\t\t<svg\r\n\t\t\t\t@click=\"changeVisibility\"\r\n\t\t\t\txmlns=\"http://www.w3.org/2000/svg\"\r\n\t\t\t\theight=\"24px\"\r\n\t\t\t\tviewBox=\"0 0 24 24\"\r\n\t\t\t\twidth=\"24px\"\r\n\t\t\t\tfill=\"#FFFFFF\"\r\n\t\t\t>\r\n\t\t\t\t<path d=\"M24 24H0V0h24v24z\" fill=\"none\" opacity=\".87\" />\r\n\t\t\t\t<path d=\"M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6-1.41-1.41z\" />\r\n\t\t\t</svg>\r\n\t\t\t<div class=\"filter__links\" :class=\"{ active: clicked }\">\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li @click=\"$emit('africa')\">Africa</li>\r\n\t\t\t\t\t<li @click=\"$emit('america')\">America</li>\r\n\t\t\t\t\t<li @click=\"$emit('asia')\">Asia</li>\r\n\t\t\t\t\t<li @click=\"$emit('europe')\">Europe</li>\r\n\t\t\t\t\t<li @click=\"$emit('oceania')\">Oceania</li>\r\n\t\t\t\t</ul>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t</div>\r\n</template>\r\n\r\n<script>\r\nexport default {\r\n\temits: [\"africa\", \"america\", \"asia\", \"europe\", \"oceania\"],\r\n\tdata() {\r\n\t\treturn {\r\n\t\t\tclicked: false,\r\n\t\t};\r\n\t},\r\n\tmethods: {\r\n\t\tchangeVisibility() {\r\n\t\t\tthis.clicked = !this.clicked;\r\n\t\t},\r\n\t\tcheckaf() {\r\n\t\t\tthis.oceania = false;\r\n\t\t\tthis.europe = false;\r\n\t\t\tthis.asia = false;\r\n\t\t\tthis.america = false;\r\n\t\t\tthis.africa = true;\r\n\t\t},\r\n\t\tcheckam() {\r\n\t\t\tthis.oceania = false;\r\n\t\t\tthis.europe = false;\r\n\t\t\tthis.asia = false;\r\n\t\t\tthis.africa = false;\r\n\t\t\tthis.america = true;\r\n\t\t},\r\n\t\tcheckas() {\r\n\t\t\tthis.oceania = false;\r\n\t\t\tthis.europe = false;\r\n\t\t\tthis.africa = false;\r\n\t\t\tthis.america = false;\r\n\t\t\tthis.asia = true;\r\n\t\t},\r\n\t\tcheckeu() {\r\n\t\t\tthis.oceania = false;\r\n\t\t\tthis.asia = false;\r\n\t\t\tthis.africa = false;\r\n\t\t\tthis.america = false;\r\n\t\t\tthis.europe = true;\r\n\t\t},\r\n\t\tcheckoce() {\r\n\t\t\tthis.asia = false;\r\n\t\t\tthis.africa = false;\r\n\t\t\tthis.america = false;\r\n\t\t\tthis.europe = false;\r\n\t\t\tthis.oceania = true;\r\n\t\t},\r\n\t},\r\n};\r\n</script>\r\n\r\n<style lang=\"scss\" scoped>\r\n@import \"@/assets/_variables.scss\";\r\n\r\n.search {\r\n\tfont-size: 1.6rem;\r\n\tpadding: 5rem 7rem;\r\n\tmax-width: 1440px;\r\n\tmargin: auto;\r\n\tdisplay: flex;\r\n\tjustify-content: space-between;\r\n\talign-items: center;\r\n\t&__input {\r\n\t\tposition: relative;\r\n\t\tsvg {\r\n\t\t\tposition: absolute;\r\n\t\t\ttop: 50%;\r\n\t\t\ttransform: translateY(-50%);\r\n\t\t\tleft: 0;\r\n\t\t\tmargin: 0 2rem;\r\n\t\t}\r\n\t}\r\n\tinput {\r\n\t\tborder-radius: 5px;\r\n\t\twidth: 50rem;\r\n\t\tborder: none;\r\n\t\toutline: none;\r\n\t\tpadding: 2rem 7rem;\r\n\t\tbackground-color: $darkblue-el;\r\n\t\tcolor: $white;\r\n\t\ttext-align: left;\r\n\t\tbox-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.19);\r\n\t\t&::placeholder {\r\n\t\t\tcolor: $white;\r\n\t\t\tfont-weight: $light;\r\n\t\t}\r\n\t}\r\n\t&__filter {\r\n\t\tdisplay: flex;\r\n\t\tjustify-content: space-between;\r\n\t\tposition: relative;\r\n\t\tcolor: $white;\r\n\t\tfont-weight: $light;\r\n\t\tfont-size: 1.6rem;\r\n\t\tborder-radius: 5px;\r\n\t\twidth: 20rem;\r\n\t\tpadding: 2rem;\r\n\t\tbox-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.19);\r\n\t\tbackground-color: $darkblue-el;\r\n\t}\r\n\tsvg {\r\n\t\tcursor: pointer;\r\n\t}\r\n}\r\n.filter__links {\r\n\tpadding: 2rem;\r\n\ttop: 0%;\r\n\tleft: 0;\r\n\topacity: 0;\r\n\tdisplay: block !important;\r\n\tvisibility: hidden;\r\n\twidth: 20rem;\r\n\tposition: absolute;\r\n\tbackground-color: $darkblue-el;\r\n\tbox-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.19);\r\n\tborder-radius: 5px;\r\n\ttransition: all 0.5s ease;\r\n\r\n\tli {\r\n\t\tpadding: 0.5rem 0;\r\n\t\tlist-style: none;\r\n\t\ttext-align: left;\r\n\t\tcursor: pointer;\r\n\t}\r\n}\r\n.active {\r\n\tpadding: 2rem;\r\n\ttop: 110%;\r\n\topacity: 1;\r\n\tvisibility: visible;\r\n\tleft: 0;\r\n\twidth: 20rem;\r\n\tposition: absolute;\r\n\tbackground-color: $darkblue-el;\r\n\tbox-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.19);\r\n\tborder-radius: 5px;\r\n\r\n\tli {\r\n\t\tpadding: 0.5rem 0;\r\n\t\tlist-style: none;\r\n\t\ttext-align: left;\r\n\t}\r\n}\r\n</style>\r\n"
+        }
+    ]
+}

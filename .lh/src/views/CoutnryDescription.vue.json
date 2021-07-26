@@ -1,0 +1,26 @@
+{
+    "sourceFile": "src/views/CoutnryDescription.vue",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 2,
+            "patches": [
+                {
+                    "date": 1627320365502,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1627320373885,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,5 +5,7 @@\n <script>\r\n export default {};\r\n </script>\r\n \r\n-<style lang=\"scss\" scoped></style>\r\n+<style lang=\"scss\" scoped>\r\n+@import \"@/assets/_variables.scss\";\r\n+</style>\r\n"
+                },
+                {
+                    "date": 1627320418793,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,11 +0,0 @@\n-<template>\r\n-\t<div></div>\r\n-</template>\r\n-\r\n-<script>\r\n-export default {};\r\n-</script>\r\n-\r\n-<style lang=\"scss\" scoped>\r\n-@import \"@/assets/_variables.scss\";\r\n-</style>\r\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1627320365502,
+            "name": "Commit-0",
+            "content": "<template>\r\n\t<div></div>\r\n</template>\r\n\r\n<script>\r\nexport default {};\r\n</script>\r\n\r\n<style lang=\"scss\" scoped></style>\r\n"
+        }
+    ]
+}

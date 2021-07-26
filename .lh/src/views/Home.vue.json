@@ -1,0 +1,30 @@
+{
+    "sourceFile": "src/views/Home.vue",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 3,
+            "patches": [
+                {
+                    "date": 1627296104332,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1627296158816,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -37,9 +37,9 @@\n \tmethods: {\n \t\tlog(country) {\n \t\t\t// this.clickedCountry = countryData;\n \t\t\t// console.log(this.clickedCountry);\n-\t\t\tconsole.log(country);\n+\t\t\tconsole.log(this.country);\n \t\t},\n \t},\n };\n </script>\n"
+                },
+                {
+                    "date": 1627296170627,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -34,12 +34,12 @@\n \t},\n \n \tname: \"Home\",\n \tmethods: {\n-\t\tlog(this.country) {\n+\t\tlog(country) {\n \t\t\t// this.clickedCountry = countryData;\n \t\t\t// console.log(this.clickedCountry);\n-\t\t\tconsole.log(this.country);\n+\t\t\tconsole.log(country);\n \t\t},\n \t},\n };\n </script>\n"
+                },
+                {
+                    "date": 1627296341431,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n <template>\n \t<navigation-bar></navigation-bar>\n-\t<fetch-data @country-data=\"log()\"></fetch-data>\n+\t<fetch-data @get-data=\"log()\"></fetch-data>\n \t<card :name=\"this.clickedCountry.name\"> </card>\n </template>\n \n <script>\n"
+                }
+            ],
+            "date": 1627296104332,
+            "name": "Commit-0",
+            "content": "<template>\n\t<navigation-bar></navigation-bar>\n\t<fetch-data @country-data=\"log()\"></fetch-data>\n\t<card :name=\"this.clickedCountry.name\"> </card>\n</template>\n\n<script>\n// @ is an alias to /src\nimport NavigationBar from \"../components/NavigarionBar.vue\";\nimport FetchData from \"../components/FetchData.vue\";\nimport Card from \"../views/Card.vue\";\n// :currencies=\"this.clickedCountry.currencies[0].name\"\n// :languages=\"this.clickedCountry.languages[0].name\n// :name=\"this.clickedCountry.name\"\n// \t:native=\"this.clickedCountry.nativeName\"\n// \t:population=\"this.clickedCountry.population\"\n// \t:languages=\"this.clickedCountry.languages\"\n// \t:region=\"this.clickedCountry.region\"\n// \t:subregion=\"this.clickedCountry.subregion\"\n// \t:capital=\"this.clickedCountry.capital\"\n// \t:topLevelDomain=\"this.clickedCountry.topLevelDomain\"\n// \t:borders=\"this.clickedCountry.borders\"\n\nexport default {\n\tcomponents: {\n\t\tNavigationBar,\n\t\tFetchData,\n\t\tCard,\n\t},\n\tdata() {\n\t\treturn {\n\t\t\tclickedCountry: {},\n\t\t};\n\t},\n\n\tname: \"Home\",\n\tmethods: {\n\t\tlog(country) {\n\t\t\t// this.clickedCountry = countryData;\n\t\t\t// console.log(this.clickedCountry);\n\t\t\tconsole.log(country);\n\t\t},\n\t},\n};\n</script>\n"
+        }
+    ]
+}
