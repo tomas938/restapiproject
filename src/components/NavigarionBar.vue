@@ -1,10 +1,10 @@
 <template>
-	<header>
+	<header :class="{ white: toggleTheme }">
 		<nav class="navigation">
 			<div class="navigation__logo">
 				<h1>Where in the world?</h1>
 			</div>
-			<div class="navigation__mode">
+			<div class="navigation__mode" @click="toggle">
 				<svg
 					xmlns="http://www.w3.org/2000/svg"
 					enable-background="new 0 0 24 24"
@@ -29,16 +29,44 @@
 </template>
 
 <script>
-export default {};
+export default {
+	emits: ["toggleColor"],
+	data() {
+		return {
+			toggleTheme: false,
+		};
+	},
+	methods: {
+		toggle() {
+			this.toggleTheme = !this.toggleTheme;
+			this.$emit("toggleColor");
+		},
+	},
+};
 </script>
 
 <style lang="scss" scoped>
 @import "@/assets/_variables.scss";
+header,
+.white {
+	background-color: $white;
+	color: $darkblue-text;
+	text-shadow: 4px -1px 5px rgba(219, 214, 214, 0.48);
 
+	svg {
+		fill: $darkblue-text;
+	}
+	h1 {
+		color: $darkblue-text;
+	}
+	h2 {
+		color: $darkblue-text;
+	}
+}
 header {
 	width: 100%;
-	background-color: $darkblue-el;
 	color: $white;
+	background-color: $darkblue-el;
 	text-shadow: 4px -1px 5px rgba(0, 0, 0, 0.48);
 	box-shadow: -5px -2px 12px 5px #000000;
 	.navigation {
@@ -50,6 +78,7 @@ header {
 		align-items: center;
 	}
 	.navigation__mode {
+		cursor: pointer;
 		display: flex;
 		justify-content: space-around;
 		align-items: center;
@@ -60,6 +89,8 @@ header {
 		fill: $white;
 	}
 	h1 {
+		color: $white;
+
 		font-size: 3rem;
 		font-weight: $bold;
 		@media only screen and (max-width: 700px) {
@@ -73,6 +104,7 @@ header {
 		}
 	}
 	h2 {
+		color: $white;
 		font-weight: $medium;
 		@media only screen and (max-width: 500px) {
 			font-size: 1.5rem;

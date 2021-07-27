@@ -13,6 +13,7 @@ export default {};
 	padding: 0;
 	box-sizing: border-box;
 	font-family: $font-primary;
+	color: $white;
 }
 html {
 	font-size: 62.5%;

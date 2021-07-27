@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 47,
+            "activePatchIndex": 52,
             "patches": [
                 {
                     "date": 1627313220832,
@@ -196,6 +196,26 @@
                 {
                     "date": 1627331541545,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -125,8 +125,11 @@\n \t\tbackground-color: $darkblue-el;\r\n \t\t@media only screen and (max-width: 750px) {\r\n \t\t\tmargin-top: 5rem;\r\n \t\t}\r\n+\t\t@media only screen and (max-width: 350px) {\r\n+\t\t\tfont-size: 1.2rem;\r\n+\t\t}\r\n \t}\r\n \tsvg {\r\n \t\tcursor: pointer;\r\n \t}\r\n"
+                },
+                {
+                    "date": 1627372520834,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -46,8 +46,9 @@\n \temits: [\"africa\", \"america\", \"asia\", \"europe\", \"oceania\"],\r\n \tdata() {\r\n \t\treturn {\r\n \t\t\tclicked: false,\r\n+\t\t\tinputedcountry: null\r\n \t\t};\r\n \t},\r\n \tmethods: {\r\n \t\tchangeVisibility() {\r\n"
+                },
+                {
+                    "date": 1627372529936,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -53,8 +53,11 @@\n \tmethods: {\r\n \t\tchangeVisibility() {\r\n \t\t\tthis.clicked = !this.clicked;\r\n \t\t},\r\n+\t\tlog() {\r\n+\t\t\tconsole.log(this.inputedcountry);\r\n+\t\t}\r\n \t},\r\n };\r\n </script>\r\n \r\n"
+                },
+                {
+                    "date": 1627372543813,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,9 +12,9 @@\n \t\t\t\t<path\r\n \t\t\t\t\td=\"M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z\"\r\n \t\t\t\t/>\r\n \t\t\t</svg>\r\n-\t\t\t<input type=\"text\" placeholder=\"Search for a country...\" />\r\n+\t\t\t<input type=\"text\" placeholder=\"Search for a country...\"  />\r\n \t\t</div>\r\n \t\t<div class=\"search__filter\">\r\n \t\t\t<p>Filter by Region</p>\r\n \t\t\t<svg\r\n"
+                },
+                {
+                    "date": 1627372592122,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,9 +12,9 @@\n \t\t\t\t<path\r\n \t\t\t\t\td=\"M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z\"\r\n \t\t\t\t/>\r\n \t\t\t</svg>\r\n-\t\t\t<input type=\"text\" placeholder=\"Search for a country...\" />\r\n+\t\t\t<input v-model=\"inputedcountry\" type=\"text\" placeholder=\"Search for a country...\"/>\r\n \t\t</div>\r\n \t\t<div class=\"search__filter\">\r\n \t\t\t<p>Filter by Region</p>\r\n \t\t\t<svg\r\n"
+                },
+                {
+                    "date": 1627372606722,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,8 +14,9 @@\n \t\t\t\t/>\r\n \t\t\t</svg>\r\n \t\t\t<input\r\n \t\t\t\tv-model=\"inputedcountry\"\r\n+\t\t\t\t@click=\"log\"\r\n \t\t\t\ttype=\"text\"\r\n \t\t\t\tplaceholder=\"Search for a country...\"\r\n \t\t\t/>\r\n \t\t</div>\r\n"
                 }
             ],
             "date": 1627313220832,

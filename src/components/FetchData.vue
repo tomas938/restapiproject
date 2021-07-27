@@ -1,17 +1,37 @@
 <template>
 	<filters
+		@search-icon-clicked="checkCountry"
+		@enter-pressed="checkCountry"
 		@africa="checkaf"
 		@america="checkam"
 		@asia="checkas"
 		@europe="checkeu"
 		@oceania="checkoce"
-	></filters>
-
+	>
+	</filters>
+	<div>
+		<ul class="grid ">
+			<li
+				v-for="country in searchedCountry"
+				:key="country.name"
+				@click="itemClicked(country), $emit('clicked')"
+			>
+				<country-view
+					:flag="country.flag"
+					:name="country.name"
+					:population="country.population"
+					:region="country.region"
+					:capital="country.capital"
+				>
+				</country-view>
+			</li>
+		</ul>
+	</div>
 	<div v-if="mounted && !africa && !america && !asia && !europe && !oceania">
 		<ul class="grid">
 			<li
 				v-for="country in countries"
-				:key="country"
+				:key="country.name"
 				@click="itemClicked(country), $emit('clicked')"
 			>
 				<country-view
@@ -138,6 +158,8 @@ export default {
 			oceania: false,
 			countrydata: null,
 			country: [],
+			searchedCountry: "",
+			addCoutnry: false,
 		};
 	},
 	mounted() {
@@ -163,11 +185,28 @@ export default {
 		checkOceania() {
 			return this.countries.filter((country) => country.region === "Oceania");
 		},
+		checking() {
+			return (
+				this.countries.filter(
+					(country) => country.name === this.searchedCountry
+				),
+				console.log(this.searchedCountry)
+			);
+		},
 	},
 	methods: {
+		checkCountry(inputedcountry) {
+			this.searchedCountry = inputedcountry;
+			this.searchedCountry = this.countries.filter(
+				(country) => country.name === this.searchedCountry
+			);
+			console.log(this.searchedCountry);
+		},
+
 		itemClicked(country) {
 			this.$emit("getData", country);
 		},
+		
 		checkaf() {
 			this.oceania = false;
 			this.europe = false;
@@ -213,7 +252,7 @@ export default {
 	max-width: 1440px;
 	margin: auto;
 	display: grid;
-	grid-template-columns: repeat(4, auto);
+	grid-template-columns: repeat(4, 1fr);
 	@media only screen and (max-width: 1300px) {
 		grid-gap: 3rem;
 	}
@@ -234,7 +273,7 @@ export default {
 	@media only screen and (max-width: 320px) {
 		padding: 0 1rem 1rem 1rem;
 	}
-	padding: 0 7rem 7rem 7rem;
+	padding: 0 7rem 2.5rem 7rem;
 	grid-gap: 7rem;
 
 	li {

@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 12,
+            "activePatchIndex": 16,
             "patches": [
                 {
                     "date": 1627328473178,
@@ -56,6 +56,22 @@
                 {
                     "date": 1627330431859,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -68,18 +68,18 @@\n \t\t@media only screen and (max-width: 500px) {\r\n \t\t\tfont-size: 1.7rem;\r\n \t\t}\r\n \t\t@media only screen and (max-width: 320px) {\r\n-\t\t\tfont-size: 1.4rem;\r\n+\t\t\tfont-size: 1.5rem;\r\n \t\t}\r\n \t}\r\n \th2 {\r\n \t\tfont-weight: $medium;\r\n \t\t@media only screen and (max-width: 500px) {\r\n \t\t\tfont-size: 1.5rem;\r\n \t\t}\r\n \t\t@media only screen and (max-width: 320px) {\r\n-\t\t\tfont-size: 1.2rem;\r\n+\t\t\tfont-size: 1.3rem;\r\n \t\t}\r\n \t}\r\n }\r\n </style>\r\n"
+                },
+                {
+                    "date": 1627386938079,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n \t\t<nav class=\"navigation\">\r\n \t\t\t<div class=\"navigation__logo\">\r\n \t\t\t\t<h1>Where in the world?</h1>\r\n \t\t\t</div>\r\n-\t\t\t<div class=\"navigation__mode\">\r\n+\t\t\t<div class=\"navigation__mode\" @click=toggleTheme>\r\n \t\t\t\t<svg\r\n \t\t\t\t\txmlns=\"http://www.w3.org/2000/svg\"\r\n \t\t\t\t\tenable-background=\"new 0 0 24 24\"\r\n \t\t\t\t\theight=\"24px\"\r\n"
+                },
+                {
+                    "date": 1627386951621,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -28,9 +28,15 @@\n \t</header>\r\n </template>\r\n \r\n <script>\r\n-export default {};\r\n+export default {\r\n+\tmethods: {\r\n+\t\ttoggleTheme() {\r\n+\t\t\t\r\n+\t\t}\r\n+\t}\r\n+};\r\n </script>\r\n \r\n <style lang=\"scss\" scoped>\r\n @import \"@/assets/_variables.scss\";\r\n"
+                },
+                {
+                    "date": 1627386965951,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -29,11 +29,9 @@\n </template>\r\n \r\n <script>\r\n export default {\r\n-\tmethods: {\r\n-\t\ttoggleTheme() {},\r\n-\t},\r\n+\t\r\n };\r\n </script>\r\n \r\n <style lang=\"scss\" scoped>\r\n"
+                },
+                {
+                    "date": 1627387058688,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n \t\t<nav class=\"navigation\">\r\n \t\t\t<div class=\"navigation__logo\">\r\n \t\t\t\t<h1>Where in the world?</h1>\r\n \t\t\t</div>\r\n-\t\t\t<div class=\"navigation__mode\" @click=\"toggleTheme\">\r\n+\t\t\t<div class=\"navigation__mode\" @click=\"$emit(toggleTheme)\">\r\n \t\t\t\t<svg\r\n \t\t\t\t\txmlns=\"http://www.w3.org/2000/svg\"\r\n \t\t\t\t\tenable-background=\"new 0 0 24 24\"\r\n \t\t\t\t\theight=\"24px\"\r\n"
                 }
             ],
             "date": 1627328473178,

@@ -1,5 +1,5 @@
 <template>
-	<navigation-bar></navigation-bar>
+	<navigation-bar @toggle-color="loig"></navigation-bar>
 
 	<fetch-data @get-data="log"></fetch-data>
 	<card
@@ -46,6 +46,10 @@ export default {
 		showCard() {
 			this.clicked = !this.clicked;
 		},
+		loig() {
+			console.log("hi");
+		},
 	},
 };
 </script>
+<style scoped></style>
