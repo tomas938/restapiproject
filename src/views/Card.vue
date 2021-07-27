@@ -86,7 +86,7 @@ export default {
 	top: 0%;
 	left: 50%;
 	width: 100%;
-	height: 100%;
+	height: 100vh;
 	transform: translateX(-50%);
 	background: rgba(0, 0, 0, 0.904);
 }
@@ -111,16 +111,16 @@ export default {
 	@media only screen and (max-width: 850px) {
 		font-size: 2rem;
 	}
-	&__btn {
-		width: 12rem;
-		padding: 1rem 3rem;
-		margin: 8rem 0 8rem 0;
-		background-color: $darkblue-el;
-		box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.32);
-		a {
-			color: rgb(179, 179, 179);
-		}
-	}
+	// &__btn {
+	// 	width: 12rem;
+	// 	padding: 1rem 3rem;
+	// 	margin: 8rem 0 8rem 0;
+	// 	background-color: $darkblue-el;
+	// 	box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.32);
+	// 	a {
+	// 		color: rgb(179, 179, 179);
+	// 	}
+	// }
 	&__content {
 		display: flex;
 		justify-content: space-between;
@@ -137,7 +137,7 @@ export default {
 		&__img {
 			width: 45%;
 			@media only screen and (max-width: 850px) {
-				width: 100%;
+				width: 80%;
 			}
 			img {
 				width: 100%;
@@ -148,7 +148,7 @@ export default {
 	&__content__description {
 		width: 45%;
 		@media only screen and (max-width: 850px) {
-			width: 100%;
+			width: 80%;
 		}
 		display: flex;
 		flex-direction: column;
@@ -162,19 +162,28 @@ export default {
 		}
 	}
 	.borders {
-		@media only screen and (max-width: 850px) {
+		@media only screen and (max-width: 1250px) {
 			display: grid;
 			grid-gap: 0.7rem;
-			grid-template-rows: repeat(3, 1fr);
+			grid-template-rows: repeat(1, 1fr);
 			grid-template-columns: repeat(3, 1fr);
+		}
+		@media only screen and (max-width: 410px) {
+			grid-gap: 0rem;
 		}
 
 		span {
 			grid-column: 1/4;
 			padding: 0 1rem 0 0;
-			font-weight: $light;
+			font-weight: $medium;
+			@media only screen and (max-width: 410px) {
+				font-size: 1.4rem;
+			}
 		}
 		a {
+			@media only screen and (max-width: 1250px) {
+				text-align: center;
+			}
 			background-color: $darkblue-el;
 			padding: 1rem 2rem;
 			margin-right: 1rem;
@@ -183,9 +192,12 @@ export default {
 			font-weight: $light;
 			@media only screen and (max-width: 600px) {
 				margin-top: 1rem;
-
 				padding: 1rem 0.5rem;
 				margin-right: 0.5rem;
+			}
+			@media only screen and (max-width: 850px) {
+				font-size: 1.4rem;
+				padding: 0.5rem 0.5rem;
 			}
 		}
 	}
@@ -199,18 +211,26 @@ h3 {
 	}
 	@media only screen and (max-width: 850px) {
 		font-size: 2rem;
-		line-height: 5rem;
+		line-height: 3.5rem;
+	}
+	@media only screen and (max-width: 650px) {
+		line-height: 2.5rem;
+		font-size: 1.5rem;
 	}
 	@media only screen and (max-width: 410px) {
-		font-size: 1.7rem;
+		font-size: 1.2rem;
+		line-height: 2rem;
 	}
 }
 h1 {
 	@media only screen and (max-width: 850px) {
-		margin-top: 5rem;
+		margin-top: 3rem;
 	}
 	@media only screen and (max-width: 410px) {
-		font-size: 3.7rem;
+		margin-top: 0.8rem;
+	}
+	@media only screen and (max-width: 410px) {
+		font-size: 2.7rem;
 	}
 }
 a {
