@@ -67,7 +67,7 @@
 						<div class="text" :class="{ white: theme }">
 							<h3 :class="{ white: theme }">{{ country.name }}</h3>
 							<h4 :class="{ white: theme }">
-								<span :class="{ white: theme }"> Population:</span
+								<span :class="{ white: theme }">Population:</span
 								>{{ country.population }}
 							</h4>
 							<h4 :class="{ white: theme }">
@@ -305,7 +305,7 @@ export default {
 		},
 		checking() {
 			return this.countries.filter(
-				(country) => country.name === this.inputedcountry
+				(country) => country.name === this.inputedcountry.toLowerCase()
 			);
 		},
 	},
@@ -318,7 +318,8 @@ export default {
 		},
 		checkCountry() {
 			this.searchedCountry = this.inputedcountry = this.countries.filter(
-				(country) => country.name === this.inputedcountry
+				(country) =>
+					country.name.toLowerCase() === this.inputedcountry.toLowerCase()
 			);
 			this.inputedcountry = "";
 			console.log(this.inputedcountry);
