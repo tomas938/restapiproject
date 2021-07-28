@@ -1,5 +1,5 @@
 <template>
-	<header :class="{ white: toggleTheme }">
+	<header :class="{ sky: toggleTheme }">
 		<nav class="navigation">
 			<div class="navigation__logo">
 				<h1>Where in the world?</h1>
@@ -47,11 +47,10 @@ export default {
 
 <style lang="scss" scoped>
 @import "@/assets/_variables.scss";
-header,
-.white {
+.sky {
 	background-color: $white;
-	color: $darkblue-text;
-	text-shadow: 4px -1px 5px rgba(219, 214, 214, 0.48);
+	text-shadow: 0px 0px 0px rgba(0, 0, 0, 0.48);
+	border-bottom: 3px solid #f5f1f1;
 
 	svg {
 		fill: $darkblue-text;
@@ -63,6 +62,11 @@ header,
 		color: $darkblue-text;
 	}
 }
+// header .white {
+// 	background-color: $white;
+// 	color: $darkblue-text;
+
+// }
 header {
 	width: 100%;
 	color: $white;

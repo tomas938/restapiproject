@@ -1,6 +1,4 @@
 <template>
-	<navigation-bar @toggle-color="loig"></navigation-bar>
-
 	<fetch-data @get-data="log"></fetch-data>
 	<card
 		v-if="clicked"
@@ -21,12 +19,11 @@
 </template>
 
 <script>
-import NavigationBar from "../components/NavigarionBar.vue";
 import FetchData from "../components/FetchData.vue";
 import Card from "../views/Card.vue";
+
 export default {
 	components: {
-		NavigationBar,
 		FetchData,
 		Card,
 	},
@@ -34,6 +31,7 @@ export default {
 		return {
 			clickedCountry: {},
 			clicked: null,
+			theme: false,
 		};
 	},
 
@@ -46,10 +44,7 @@ export default {
 		showCard() {
 			this.clicked = !this.clicked;
 		},
-		loig() {
-			console.log("hi");
-		},
 	},
 };
 </script>
-<style scoped></style>
+<style scoped lang="scss"></style>
