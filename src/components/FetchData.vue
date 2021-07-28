@@ -426,7 +426,7 @@ export default {
 		padding: 2rem 3rem 5rem 3rem;
 	}
 	@media only screen and (max-width: 600px) {
-		margin-bottom: 5rem;
+		margin-bottom: -5rem;
 	}
 	h3 {
 		font-weight: $bold;
