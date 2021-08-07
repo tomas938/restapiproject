@@ -22,7 +22,7 @@
 						</g>
 					</g>
 				</svg>
-				<h2>{{ toggleTheme ? "Dark mode" : "Light mode" }}</h2>
+				<h2>{{ toggleTheme ? "Dark mode" : "Dark mode" }}</h2>
 			</div>
 		</nav>
 	</header>
