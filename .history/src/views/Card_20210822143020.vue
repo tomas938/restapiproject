@@ -75,11 +75,9 @@ export default {
 			country: null,
 		};
 	},
-	methods: {
-		numberWithCommas(population) {
-			if (population)
-				return population.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-		},
+	numberWithCommas(population) {
+		if (population)
+			return population.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 	},
 };
 </script>

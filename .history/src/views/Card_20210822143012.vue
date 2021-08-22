@@ -14,7 +14,7 @@
 								Native Name: <span>{{ native }}</span>
 							</h3>
 							<h3>
-								Population: <span>{{ numberWithCommas(population) }}</span>
+								Population: <span>{{ population }}</span>
 							</h3>
 							<h3>
 								Region: <span>{{ region }}</span>
@@ -75,11 +75,9 @@ export default {
 			country: null,
 		};
 	},
-	methods: {
-		numberWithCommas(population) {
-			if (population)
-				return population.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-		},
+	numberWithCommas(population) {
+		if (population)
+			return population.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 	},
 };
 </script>

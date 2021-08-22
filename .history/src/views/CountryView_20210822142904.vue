@@ -2,7 +2,7 @@
 	<img :src="`${flag}`" alt="" />
 	<div class="text">
 		<h3 class="country-name">{{ name }}</h3>
-		<h4><span>Population:</span> {{ numberWithCommas(population) }}</h4>
+		<h4><span>Population:</span> {{ population }}</h4>
 		<h4 class="country-region"><span>Region:</span> {{ region }}</h4>
 		<h4><span>Capital:</span> {{ capital }}</h4>
 	</div>
@@ -12,9 +12,8 @@
 export default {
 	props: ["flag", "name", "population", "region", "capital"],
 	methods: {
-		numberWithCommas(population) {
-			if (population)
-				return population.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+		numberWithCommas(x) {
+			if (x) return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 		},
 	},
 };

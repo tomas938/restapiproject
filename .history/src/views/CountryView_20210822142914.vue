@@ -12,9 +12,8 @@
 export default {
 	props: ["flag", "name", "population", "region", "capital"],
 	methods: {
-		numberWithCommas(population) {
-			if (population)
-				return population.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+		numberWithCommas(x) {
+			if (x) return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 		},
 	},
 };
